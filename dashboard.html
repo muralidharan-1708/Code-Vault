@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Coding Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome <span id="user-display"></span>!</h2>
+        <button onclick="logout()">Logout</button>
+
+        <h3>Add / Edit a Coding Question</h3>
+        <input type="hidden" id="edit-index">  <!-- Hidden field to track editing -->
+        <input type="text" id="question" placeholder="Enter Question" class="tooltip">
+        <span class="tooltiptext">Enter the coding question here</span>
+        <textarea id="solution" placeholder="Enter Solution" class="tooltip"></textarea>
+        <span class="tooltiptext">Enter the solution here</span>
+        <input type="text" id="tags" placeholder="Enter Tags (comma separated)" class="tooltip">
+        <span class="tooltiptext">Enter tags separated by commas</span>
+        <button onclick="saveQuestion()">Save</button>
+        <button onclick="loadQuestions()">View Saved Questions</button> <!-- Button to view saved questions -->
+
+        <ul id="questions-list"></ul> <!-- Ensure this element is present -->
+
+        <p id="storage-warning" style="color: red; font-weight: bold;"></p> <!-- Storage warning -->
+
+        <!-- Section to display full question and solution -->
+        <div id="full-question-section" style="display: none;">
+            <h3>Full Question</h3>
+            <p id="full-question"></p>
+            <h3>Solution</h3>
+            <pre id="full-solution"></pre>
+            <button onclick="closeFullQuestion()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

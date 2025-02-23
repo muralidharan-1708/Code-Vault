@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Coding Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Coding Tracker - Login</h2>
+
+        <!-- Login Form -->
+        <div id="login-section">
+            <div class="tooltip">
+                <input type="text" id="username" placeholder="Enter username">
+                <span class="tooltiptext">Enter your username</span>
+            </div>
+            <div class="tooltip">
+                <input type="password" id="password" placeholder="Enter password">
+                <span class="tooltiptext">Enter your password</span>
+            </div>
+            <button onclick="login()">Login</button>
+            <p>New User? <a href="#" onclick="showSignup()">Create Account</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-section" style="display: none;">
+            <div class="tooltip">
+                <input type="text" id="new-username" placeholder="Choose username">
+                <span class="tooltiptext">Choose a unique username</span>
+            </div>
+            <div class="tooltip">
+                <input type="password" id="new-password" placeholder="Choose password">
+                <span class="tooltiptext">Choose a strong password</span>
+            </div>
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
