@@ -5,22 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Coding Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h2>Welcome <span id="user-display"></span>!</h2>
-        <button onclick="logout()">Logout</button>
+        <h2>Welcome <span id="user-display"></span>! <i class="fas fa-user"></i></h2>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
 
         <h3>Add / Edit a Coding Question</h3>
         <input type="hidden" id="edit-index">  <!-- Hidden field to track editing -->
-        <input type="text" id="question" placeholder="Enter Question" class="tooltip">
-        <span class="tooltiptext">Enter the coding question here</span>
-        <textarea id="solution" placeholder="Enter Solution" class="tooltip"></textarea>
-        <span class="tooltiptext">Enter the solution here</span>
-        <input type="text" id="tags" placeholder="Enter Tags (comma separated)" class="tooltip">
-        <span class="tooltiptext">Enter tags separated by commas</span>
-        <button onclick="saveQuestion()">Save</button>
-        <button onclick="loadQuestions()">View Saved Questions</button> <!-- Button to view saved questions -->
+        <div class="tooltip">
+            <input type="text" id="question" placeholder="Enter Question">
+            <span class="tooltiptext">Enter the coding question here</span>
+            <i class="fas fa-question-circle"></i>
+        </div>
+        <div class="tooltip">
+            <textarea id="solution" placeholder="Enter Solution"></textarea>
+            <span class="tooltiptext">Enter the solution here</span>
+            <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="tooltip">
+            <input type="text" id="tags" placeholder="Enter Tags (comma separated)">
+            <span class="tooltiptext">Enter tags separated by commas</span>
+            <i class="fas fa-tags"></i>
+        </div>
+        <button onclick="saveQuestion()"><i class="fas fa-save"></i> Save</button>
+        <button onclick="loadQuestions()"><i class="fas fa-eye"></i> View Saved Questions</button> <!-- Button to view saved questions -->
+
+        <h3>Search, Filter, and Sort Questions</h3>
+        <div class="tooltip">
+            <input type="text" id="search" placeholder="Search Questions" oninput="searchQuestions()">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="tooltip">
+            <input type="text" id="filter-tags" placeholder="Filter by Tags (comma separated)" oninput="filterQuestionsByTags()">
+            <i class="fas fa-filter"></i>
+        </div>
+        <div class="tooltip">
+            <select id="sort-questions" onchange="sortQuestions()">
+                <option value="">Sort By</option>
+                <option value="alphabetical">Alphabetical</option>
+                <option value="date">Date</option>
+            </select>
+            <i class="fas fa-sort"></i>
+        </div>
 
         <ul id="questions-list"></ul> <!-- Ensure this element is present -->
 
@@ -32,8 +60,11 @@
             <p id="full-question"></p>
             <h3>Solution</h3>
             <pre id="full-solution"></pre>
-            <button onclick="closeFullQuestion()">Close</button>
+            <button onclick="closeFullQuestion()"><i class="fas fa-times"></i> Close</button>
         </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
     </div>
 
     <script src="script.js"></script>
