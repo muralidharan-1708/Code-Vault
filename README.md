@@ -1,46 +1,28 @@
-**Code Vault**
-  
-  Code-Vault is a web-based platform designed to store, organize, and access previous years' coding questions and answers. The platform provides a user-friendly interface for users to browse, search, and manage coding problems efficiently.
+# 📁 Code Vault
 
-**Features**
+📝 A web-based platform for storing and managing coding questions and answers with login functionality.
 
-  User Authentication: Secure login system for users.
+## ✨ Features
 
-  Question Storage: Save and organize coding problems and solutions.
-  
-  Search Functionality: Quickly find coding problems based on keywords.
-  
-  Responsive Design: Fully functional across different screen sizes.
-  
-  Simple UI: Clean and easy-to-navigate interface.
+- 🔐 **User Authentication**: Secure login and account management.
+- 📂 **Question Storage**: Save and categorize coding questions.
+- 🌐 **Responsive Design**: Fully responsive UI with HTML, CSS, and JavaScript.
+- 🔍 **Search & Filter**: Easily find questions based on categories.
 
-**Technologies Used**
+## 🛠️ Technologies Used
 
-HTML: Structuring the web pages.
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) 
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) 
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) 
 
-CSS: Styling and enhancing the user interface.
+## 🚀 Getting Started
 
-JavaScript: Adding interactivity and handling user inputs.
+1. **Clone the repository**  
+   ```sh
+   git clone https://github.com/muralidharan-1708/Code-Vault.git
+**2.Navigate to the project folder**
 
-**Installation**
-
-Clone the repository:
-
-  git clone https://github.com/muralidharan-1708/Code-Vault.git
-
-Navigate to the project folder:
-
-  cd Code-Vault
-
-Open index.html in a browser.
-
-**Usage**
-
--> Sign up or log in to your account.
-
--> Add coding problems along with their solutions.
-
--> Use the search bar to find problems.
-
--> View and practice coding questions.
-
+    cd Code-Vault
+**3.Open index.html in a browser**
+    
+  Alternatively, use Live Server in VS Code.
