@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Coding Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h2>Coding Tracker - Login</h2>
+        <h2><i class="fas fa-code"></i> Code Vault - Login</h2>
 
         <!-- Login Form -->
         <div id="login-section">
             <div class="tooltip">
                 <input type="text" id="username" placeholder="Enter username">
                 <span class="tooltiptext">Enter your username</span>
+                <i class="fas fa-user"></i>
             </div>
             <div class="tooltip">
                 <input type="password" id="password" placeholder="Enter password">
                 <span class="tooltiptext">Enter your password</span>
+                <i class="fas fa-lock"></i>
             </div>
-            <button onclick="login()">Login</button>
+            <button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button>
             <p>New User? <a href="#" onclick="showSignup()">Create Account</a></p>
         </div>
 
@@ -29,14 +32,19 @@
             <div class="tooltip">
                 <input type="text" id="new-username" placeholder="Choose username">
                 <span class="tooltiptext">Choose a unique username</span>
+                <i class="fas fa-user-plus"></i>
             </div>
             <div class="tooltip">
                 <input type="password" id="new-password" placeholder="Choose password">
                 <span class="tooltiptext">Choose a strong password</span>
+                <i class="fas fa-lock"></i>
             </div>
-            <button onclick="signup()">Sign Up</button>
+            <button onclick="signup()"><i class="fas fa-user-plus"></i> Sign Up</button>
             <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
         </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
     </div>
 
     <script src="script.js"></script>
